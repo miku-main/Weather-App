@@ -1,4 +1,3 @@
-require('dotenv').config();
 const cityInput = document.querySelector('.city-input')
 const searchBtn = document.querySelector('.search-btn')
 
@@ -16,7 +15,6 @@ const currentDateTxt = document.querySelector('.current-date-txt')
 
 const forecastItemsContainer = document.querySelector('.forecast-items-container')
 
-const apiKey = process.env.API_KEY;
 
 
 searchBtn.addEventListener('click', () => {
@@ -36,7 +34,7 @@ cityInput.addEventListener('keydown', (event) => {
 
 
 async function getFetchData(endPoint, city) {
-    const apiUrl = `https://api.openweathermap.org/data/2.5/${endPoint}?q=${city}&appid=${apiKey}&units=metric`
+    const apiUrl = `https://api.openweathermap.org/data/2.5/${endPoint}?q=${city}&appid=${API_KEY}&units=metric`
 
     const response = await fetch(apiUrl)
 
