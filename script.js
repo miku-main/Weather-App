@@ -1,3 +1,4 @@
+require('dotenv').config();
 const cityInput = document.querySelector('.city-input')
 const searchBtn = document.querySelector('.search-btn')
 
@@ -15,7 +16,7 @@ const currentDateTxt = document.querySelector('.current-date-txt')
 
 const forecastItemsContainer = document.querySelector('.forecast-items-container')
 
-const apiKey = 'a55037037f9ee20cd849f12b8229a8a2'
+const apiKey = process.env.API_KEY;
 
 
 searchBtn.addEventListener('click', () => {
