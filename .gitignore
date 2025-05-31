@@ -1,1 +1,1 @@
-echo "api-config.js" >> .gitignore
+echo "config.js" >> .gitignore
