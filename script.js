@@ -1,4 +1,3 @@
-import { API_KEY } from './config.js';
 const cityInput = document.querySelector('.city-input')
 const searchBtn = document.querySelector('.search-btn')
 
