@@ -2,30 +2,21 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main ] # Runs on push to main
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions.setup-node@v3
-        with: 
-          node-version: 18
-      
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build with environment variable
+      - name: Inject API key
         run: |
-          echo "API_KEY=${{ secrets.API_KEY }}" > .env
-          npm run build
+          sed -i "s/__API_KEY__/${{ secrets.API_KEY }}/g" config.js
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build # For CRA
+          publish_dir: ./ # Publishes the entire repo
