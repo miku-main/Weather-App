@@ -32,10 +32,10 @@ cityInput.addEventListener('keydown', (event) => {
 
 
 async function getFetchData(endPoint, city) {
-    const response = await fetch(`https://your-vercel-project-name.vercel.app/api/weather?type=${endPoint}&city=${encodeURIComponent(city)}`);
+    const response = await fetch(`https://https://miku-main-weather.vercel.app/api/weather?type=${endPoint}&city=${encodeURIComponent(city)}`);
     return response.json();
   }
-    
+
 function getWeatherIcon(id) {
     if (id <= 232) return 'thunderstorm.svg'
     if (id <= 321) return 'drizzle.svg'
