@@ -32,7 +32,7 @@ cityInput.addEventListener('keydown', (event) => {
 
 
 async function getFetchData(endPoint, city) {
-    const response = await fetch(`https://https://miku-main-weather.vercel.app/api/weather?type=${endPoint}&city=${encodeURIComponent(city)}`);
+    const response = await fetch(`https://miku-main-weather.vercel.app/api/weather?type=${endPoint}&city=${encodeURIComponent(city)}`);
     return response.json();
   }
 
