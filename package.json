@@ -1,0 +1,14 @@
+{
+    "name": "weather-app",
+    "version": "1.0.0",
+    "description": "Weather app with Vercel API route proxy to OpenWeatherMap",
+    "type": "module",
+    "scripts": {
+      "dev": "vercel dev",
+      "start": "vercel start"
+    },
+    "dependencies": {
+      "node-fetch": "^3.3.2"
+    }
+  }
+  

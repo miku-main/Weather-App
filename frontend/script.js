@@ -32,8 +32,8 @@ cityInput.addEventListener('keydown', (event) => {
 
 
 async function getFetchData(endPoint, city) {
-    const response = await fetch(`/api/weather?type=${endPoint}&city=${encodeURIComponent(city)}`)
-    return response.json()
+    const response = await fetch(`/api/weather?type=${endPoint}&city=${encodeURIComponent(city)}`);
+    return response.json();
 }
 
 function getWeatherIcon(id) {
