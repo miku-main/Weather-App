@@ -1,7 +1,10 @@
-// api/weather.js
 import fetch from 'node-fetch';
 
 export default async function handler(req, res) {
+  res.setHeader('Access-Control-Allow-Origin', 'https://miku-main.github.io');
+  res.setHeader('Access-Control-Allow-Methods', 'GET');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
   const { city, type } = req.query;
   const apiKey = process.env.OPENWEATHER_API_KEY;
 
