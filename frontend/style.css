@@ -8,7 +8,7 @@
 }
 
 body {
-    background: url("/Weather-App/assets/bg.jpg");
+    background: url("assets/bg.jpg");
     width: 100%;
     height: 100dvh;
     background-size: cover;
